@@ -68,7 +68,8 @@ spawnSelected' lst = gridselect conf lst >>= flip whenJust spawn
 myKeysTest = 
           [("M-p p", spawn "dmenu_run")             -- launch dmenu
           ,("M-S-p", spawn "gmrun")                 -- launch gmrun
-          ,("M-p e", spawn "confedit")              -- launch script in ~/development/scripts/
+          ,("M-p e", spawn "lanu-confedit")         -- launch script in ~/my-scripts/
+          ,("M-p w", spawn "lanu-wifi")             -- launch script in ~/my-scripts/
           ,("M-S-t", spawnSelected'                 -- launch GridSelect
             [ ("Firefox", "firefox")
             , ("Nautilus", "nautilus")
