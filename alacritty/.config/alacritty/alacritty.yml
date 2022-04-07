@@ -117,8 +117,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: "Hack Nerd Font"
-
+    #family: "Hack Nerd Font"
+    family: "FuraMono Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Regular
 
@@ -128,8 +128,8 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "Hack Nerd Font"
-
+    #family: "Hack Nerd Font"
+    family: "FuraMono Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Bold
 
@@ -139,8 +139,8 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "Hack Nerd Font"
-
+    #family: "Hack Nerd Font"
+    family: "FuraMono Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Italic
 
@@ -150,19 +150,19 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: "Hack Nerd Font"
-
+    #family: "Hack Nerd Font"
+    family: "FuraMono Nerd Font"
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 8.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  #offset:
-  #  x: 0
+  offset:
+    x: -1
   #  y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
@@ -250,8 +250,41 @@ schemes:
 
     transparent_background_colors: true
 
+### Gruvbox dark ###
+  GruvboxDark: &GruvboxDark
+    # Default colors
+    primary:
+      # hard contrast: background = '0x1d2021'
+      background: '#282828'
+      # soft contrast: background = '0x32302f'
+      foreground: '#ebdbb2'
+
+    # Normal colors
+    normal:
+      black:   '#282828'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#a89984'
+
+    # Bright colors
+    bright:
+      black:   '#928374'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
+      white:   '#ebdbb2'
+    transparent_background_colors: true
+
 #colors: *tokyo-night
-colors: *tokyo-night-storm
+#colors: *tokyo-night-storm
+colors: *GruvboxDark
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
