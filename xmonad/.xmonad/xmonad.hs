@@ -75,6 +75,7 @@ myKeysTest =
             , ("Nautilus", "nautilus")
             , ("Nitrogen", "nitrogen")
             , ("Pcmanfm", "pcmanfm")
+            , ("Pamac", "pamac-manager")
             , ("Nvim", "nvim")])
           ,("M-S-c", kill)                          --close focused window
           ,("M-<Space>", sendMessage NextLayout)    -- Rotate through the available layout algorithms     
