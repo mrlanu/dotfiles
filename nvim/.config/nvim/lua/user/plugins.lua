@@ -105,6 +105,9 @@ return packer.startup(function(use)
 
   -- Colorizer
   use "norcalli/nvim-colorizer.lua"
+  
+  -- Multi cursor
+  use {'mg979/vim-visual-multi', branch = 'master'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
