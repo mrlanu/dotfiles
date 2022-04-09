@@ -70,6 +70,7 @@ myKeysTest =
           ,("M-S-p", spawn "gmrun")                 -- launch gmrun
           ,("M-p e", spawn "lanu-confedit")         -- launch script in ~/my-scripts/
           ,("M-p w", spawn "lanu-wifi")             -- launch script in ~/my-scripts/
+          ,("S-v h", spawn "pactl set-sink-volume @DEFAULT_SINK@ 150%") -- set volume to 150%
           ,("M-S-t", spawnSelected'                 -- launch GridSelect
             [ ("Firefox", "firefox")
             , ("Nautilus", "nautilus")
@@ -99,7 +100,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0, xF86XK_AudioMute), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
     , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 10%-")
     , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 10%+")
-
     -- Reset the layouts on the current workspace to default
     ,((modm .|. shiftMask,  xK_space ), setLayout $ XMonad.layoutHook conf)
     
