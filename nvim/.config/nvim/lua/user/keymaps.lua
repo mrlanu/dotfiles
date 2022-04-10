@@ -71,3 +71,6 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
 keymap("n", "qq", ":NvimTreeToggle<cr>", opts)
+
+-- Turn off highlighting after search
+keymap("n", "<C-z>", ":noh<cr>", opts)
