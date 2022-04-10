@@ -81,6 +81,8 @@ myKeysTest =
           ,("M-S-c", kill)                          --close focused window
           ,("M-<Space>", sendMessage NextLayout)    -- Rotate through the available layout algorithms     
           ,("M-n", refresh)                         -- Resize viewed windows to the correct size
+          ,("C-<Print>", spawn "sleep 0.2; scrot -s") -- Print selected window (should be select after keys pressed)
+          ,("<Print>", spawn "scrot")                 -- Print whole screen
          -- ,("M-S-<Space>", setLayout $ XMonad.layoutHook conf)
           ]
 
