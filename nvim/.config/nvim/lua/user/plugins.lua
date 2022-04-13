@@ -46,9 +46,6 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   
-  -- Terminal
-  use "akinsho/toggleterm.nvim"
-  
   -- Colorschemes
   use "lunarvim/colorschemes"
   --use "lunarvim/darkplus.nvim"
@@ -63,6 +60,15 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+  
+  -- for crates
+  use {
+      'saecki/crates.nvim',
+      requires = { 'nvim-lua/plenary.nvim' },
+      config = function()
+          require('crates').setup()
+      end,
+  }
   
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
