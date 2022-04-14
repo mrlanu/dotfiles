@@ -74,3 +74,12 @@ keymap("n", "qq", ":NvimTreeToggle<cr>", opts)
 
 -- Turn off highlighting after search
 keymap("n", "<C-z>", ":noh<cr>", opts)
+
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "gD", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+keymap("n", "<c-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+keymap("n", "1gD", "<cmd>lua vim.lsp.buf.type_definition()<CR> ", opts)
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+keymap("n", "g0", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", opts)
+keymap("n", "gW", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>", opts)
