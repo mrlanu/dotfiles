@@ -70,7 +70,7 @@ myKeysTest =
           ,("M-S-p", spawn "gmrun")                 -- launch gmrun
           ,("M-p e", spawn "lanu-confedit")         -- launch script in ~/my-scripts/
           ,("M-p w", spawn "lanu-wifi")             -- launch script in ~/my-scripts/
-          ,("S-v h", spawn "pactl set-sink-volume @DEFAULT_SINK@ 150%") -- set volume to 150%
+          ,("M-v h", spawn "pactl set-sink-volume @DEFAULT_SINK@ 150%") -- set volume to 150%
           ,("M-S-t", spawnSelected'                 -- launch GridSelect
             [ ("Firefox", "firefox")
             , ("Nautilus", "nautilus")
