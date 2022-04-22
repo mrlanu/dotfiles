@@ -63,11 +63,12 @@ return packer.startup(function(use)
   
   -- for crates
   use {
-      'saecki/crates.nvim',
-      requires = { 'nvim-lua/plenary.nvim' },
-      config = function()
-          require('crates').setup()
-      end,
+    'saecki/crates.nvim',
+    tag = 'v0.2.1',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+        require('crates').setup()
+    end,
   }
   
   -- snippets
@@ -100,7 +101,12 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
  
   -- Tree
-  use "kyazdani42/nvim-tree.lua"
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    }
+  }
   
   --Bufferline
   use "kyazdani42/nvim-web-devicons"

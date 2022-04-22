@@ -170,7 +170,7 @@ local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		-- standalone file support
 		-- setting it to false may improve startup time
-		standalone = false,
+		standalone = true,
 	}, -- rust-analyer options
 
 	-- debugging stuff
