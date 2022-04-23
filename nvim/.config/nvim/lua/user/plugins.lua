@@ -64,13 +64,13 @@ return packer.startup(function(use)
   -- for crates
   use {
     'saecki/crates.nvim',
-    tag = 'v0.2.1',
-    requires = { 'nvim-lua/plenary.nvim' },
+    event = { "BufRead Cargo.toml" },
+    requires = { { 'nvim-lua/plenary.nvim' } },
     config = function()
         require('crates').setup()
     end,
   }
-  
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
