@@ -36,6 +36,11 @@ vim.opt.guifont = "Hack Nerd Font:h17"               -- the font used in graphic
 
 vim.opt.shortmess:append "c"
 
+-- toggle highlight
+vim.cmd [[ set incsearch ]]
+vim.cmd [[ set nohlsearch ]]
+vim.cmd [[ nnoremap <c-z> :set hlsearch!<cr>]]
+
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

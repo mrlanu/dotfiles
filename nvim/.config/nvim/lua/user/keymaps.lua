@@ -20,10 +20,10 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<A-h>", "<C-w>h", opts)
+keymap("n", "<A-j>", "<C-w>j", opts)
+keymap("n", "<A-k>", "<C-w>k", opts)
+keymap("n", "<A-l>", "<C-w>l", opts)
 
 --keymap("n", "<leader>e", ":Lex 25<cr>", opts)
 
@@ -34,8 +34,8 @@ keymap("n", "<C-S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-S-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-l>", ":bnext<CR>", opts)
+keymap("n", "<C-h>", ":bprevious<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -69,8 +69,9 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("n", "ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
+-- Gitsigns
+keymap("n", "<leader>g", "<cmd>Gitsigns next_hunk<cr>", opts)
+keymap("n", "<leader>s", "<cmd>Gitsigns preview_hunk<cr>", opts)
+
 -- Nvimtree
 keymap("n", "qq", ":NvimTreeToggle<cr>", opts)
-
--- Turn off highlighting after search
-keymap("n", "<C-z>", ":noh<cr>", opts)
