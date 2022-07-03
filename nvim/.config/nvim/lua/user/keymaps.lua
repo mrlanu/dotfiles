@@ -39,7 +39,7 @@ keymap("n", "<C-h>", ":bprevious<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jk", "<ESC>:w<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -75,3 +75,6 @@ keymap("n", "<leader>s", "<cmd>Gitsigns preview_hunk<cr>", opts)
 
 -- Nvimtree
 keymap("n", "qq", ":NvimTreeToggle<cr>", opts)
+
+-- variable rename
+keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)

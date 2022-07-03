@@ -66,18 +66,23 @@ spawnSelected' lst = gridselect conf lst >>= flip whenJust spawn
 
 --myKeysTest :: [(String, X ())] 
 myKeysTest = 
-          [("M-p p", spawn "dmenu_run")             -- launch dmenu
+          [("M-S-<Return>", spawn (myTerminal))
+          ,("M-p p", spawn "dmenu_run")             -- launch dmenu
           ,("M-S-p", spawn "gmrun")                 -- launch gmrun
           ,("M-p e", spawn "lanu-confedit")         -- launch script in ~/my-scripts/
           ,("M-p w", spawn "lanu-wifi")             -- launch script in ~/my-scripts/
           ,("M-v h", spawn "pactl set-sink-volume @DEFAULT_SINK@ 150%") -- set volume to 150%
           ,("M-S-t", spawnSelected'                 -- launch GridSelect
             [ ("Firefox", "firefox")
+            , ("Chrome", "google-chrome-stable")
+            , ("Blueman", "blueman-manager")
             , ("Nautilus", "nautilus")
+            , ("Pavucontrol", "pavucontrol")
+            , ("Postman", "~/postman/postman-9.18.3-linux-x64/Postman/Postman")
+            , ("Idea", "~/idea/idea-IU-221.5080.210/bin/idea.sh")
             , ("Nitrogen", "nitrogen")
-            , ("Pcmanfm", "pcmanfm")
-            , ("Pamac", "pamac-manager")
-            , ("Nvim", "nvim")])
+            , ("Gimp", "gimp")
+            , ("FBReader", "FBReader")])
           ,("M-S-c", kill)                          --close focused window
           ,("M-<Space>", sendMessage NextLayout)    -- Rotate through the available layout algorithms     
           ,("M-n", refresh)                         -- Resize viewed windows to the correct size
@@ -92,10 +97,10 @@ myKeysTest =
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch a terminal
-    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    [ --((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
     
     -- brughtnes keys
-    , ((0, xF86XK_MonBrightnessUp), spawn "lux -a 10%")
+    ((0, xF86XK_MonBrightnessUp), spawn "lux -a 10%")
     , ((0, xF86XK_MonBrightnessDown), spawn "lux -s 10%")
 
     -- volume keys
@@ -237,7 +242,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
 --
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
-    , className =? "Gimp"           --> doFloat
+    --, className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 

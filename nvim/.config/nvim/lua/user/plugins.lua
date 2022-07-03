@@ -130,7 +130,10 @@ return packer.startup(function(use)
   -- Vim-airline
   use "vim-airline/vim-airline"
   use "vim-airline/vim-airline-themes"
-
+  
+  -- Vertical lines at each indentation level
+  use "Yggdroot/indentLine"
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

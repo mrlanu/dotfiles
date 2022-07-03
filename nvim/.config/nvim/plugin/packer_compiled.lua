@@ -143,6 +143,11 @@ _G.packer_plugins = {
     path = "/home/mrlanu/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  indentLine = {
+    loaded = true,
+    path = "/home/mrlanu/.local/share/nvim/site/pack/packer/start/indentLine",
+    url = "https://github.com/Yggdroot/indentLine"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/mrlanu/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
