@@ -83,6 +83,7 @@ return packer.startup(function(use)
 
   -- use "nvim-lua/lsp_extensions.nvim"
   use "simrat39/rust-tools.nvim"
+  use 'nvim-lua/plenary.nvim'
 
   -- Debugging
   use "mfussenegger/nvim-dap"

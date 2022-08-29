@@ -106,6 +106,7 @@ myKeysBinding =
             , ("Idea", "~/idea/idea-IU-221.5080.210/bin/idea.sh")
             , ("Nitrogen", "nitrogen")
             , ("Gimp", "gimp")
+            , ("VLC player", "vlc")
             , ("Nvim", (myTerminal ++ " -e nvim"))
             , ("FBReader", "FBReader")])
           ,("C-<Print>", spawn "sleep 0.2; scrot -s") -- Print selected window (should be select after keys pressed)
